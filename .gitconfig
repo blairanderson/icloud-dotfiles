@@ -8,8 +8,8 @@
   autosetuprebase = always
   autosetupmerge = true
 [user]
-	name = Justin Searls
-	email = searls@gmail.com
+	name = Blair Anderson
+	email = blair81@gmail.com
 [core]
   editor = vim
   autocrlf = input
