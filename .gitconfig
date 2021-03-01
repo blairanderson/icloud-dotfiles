@@ -1,15 +1,19 @@
 [push]
   default = current
+  followTags = true
+[pull]
+	rebase = true
+  tags = true
 [branch]
   autosetuprebase = always
   autosetupmerge = true
 [user]
-  name = Justin Searls
-  email = searls@gmail.com
+	name = Justin Searls
+	email = searls@gmail.com
 [core]
   editor = vim
   autocrlf = input
-  excludesfile = /Users/justin/.gitignore_global
+  excludesfile = ~/.gitignore_global
   mergetool = opendiff
   autostash = true
 [heroku]
@@ -29,8 +33,19 @@
   helper = osxkeychain
 [rebase]
   autostash = true
+[rerere]
+  enabled = true
+  autoupdate = true
+
+# This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
+[include]
+  path = ~/.netlify/helper/git-config
+
+# This next lines include Netlify's Git Credential Helper configuration in your Git configuration.
+[include]
+  path = /Users/justin/.netlify/helper/git-config
 [filter "lfs"]
-  required = true
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
